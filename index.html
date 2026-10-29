@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Ajedrez</title>
+<style>
+
+	body {
+            background-color:#252525;
+            color: white;
+        }
+	table {
+    	border-collapse: collapse;
+	border-collapse: collapse;
+    	margin-left: auto;
+    	margin-right: auto;
+	margin-top: 20px;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+}
+td:nth-child(odd) {
+    background-color: white;
+}
+
+td:nth-child(even) {
+    background-color: black;
+}
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: black;
+}
+
+tr:nth-child(even) td:nth-child(even) {
+    background-color: white;
+}
+td {
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    color: #111111;
+    text-shadow:
+        -1px -1px 0 white,
+         1px -1px 0 white,
+        -1px  1px 0 white,
+         1px  1px 0 white;
+}
+
+
+	
+	
+	.letras {
+    display: flex;
+    width: 496px;
+    margin: 5px auto 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+	.letras span {
+    display: inline-block;
+    width: 62px;
+    text-align: center;
+}
+
+	.numeros {
+    font-weight: bold;
+    line-height: 60px;
+}
+
+	
+	.contenedor-tablero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+	
+	.numeros {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+}
+
+
+
+.subtitulo {
+    	text-align: center;
+    	color: #D4AF37;
+    	font-size: 22px;
+    	margin-top: 10px;
+	}
+
+.introduccion {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    max-width: 650px;
+    margin: 15px auto 25px;
+    line-height: 1.6;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.botones button {
+    background-color: #D4AF37;
+    color: #252525;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: white;
+}
+					
+</style>
+</head>
+
+<body>
+<h1 style="text-align: center;">Ajedrez</h1>
+<h2 class="subtitulo">Estrategia, paciencia y concentración</h2>
+
+<p class="introduccion">
+    	Bienvenido a mi página de ajedrez. Descubre un juego de 	estrategia
+    	en el que cada movimiento cuenta y cada decisión puede 	cambiar el resultado de la partida.
+</p>
+
+
+<p style="text-align: center;">«El ajedrez enseña a aceptar la derrota con dignidad y la victoria con humildad» — Garry Kasparov.</p>
+
+
+<!-- Tabla -->
+
+	<div class="contenedor-tablero">
+
+    	<p class="numeros">8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</p>
+
+<table>
+    <!-- Primera fila: piezas negras -->
+   
+<tr>
+    <td>♜</td>
+    <td>♞</td>
+    <td>♝</td>
+    <td>♛</td>
+    <td>♚</td>
+    <td>♝</td>
+    <td>♞</td>
+    <td>♜</td>
+</tr>
+
+    <!-- Segunda fila: peones negros -->
+   
+<tr>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+    <td>♟</td>
+</tr>
+
+    <!-- Tercera fila: vacía -->
+    <tr>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+    </tr>
+
+    <!-- Cuarta fila: vacía -->
+    <tr>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+    </tr>
+
+    <!-- Quinta fila: vacía -->
+    <tr>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+    </tr>
+
+    <!-- Sexta fila: vacía -->
+    <tr>
+        <td></td><td></td><td></td><td></td>
+        <td></td><td></td><td></td><td></td>
+    </tr>
+
+    <!-- Séptima fila: peones blancos -->
+    
+<tr>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+    <td>♙</td>
+</tr>
+
+    <!-- Octava fila: piezas blancas -->
+    
+<tr>
+    <td>♖</td>
+    <td>♘</td>
+    <td>♗</td>
+    <td>♕</td>
+    <td>♔</td>
+    <td>♗</td>
+    <td>♘</td>
+    <td>♖</td>
+</tr>
+</table>
+</div>
+
+
+<p class="letras">
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+    <span>E</span>
+    <span>F</span>
+    <span>G</span>
+    <span>H</span>
+</p>
+
+
+<div class="botones">
+    <button>Nueva partida</button>
+    <button onclick="mostrarReglas()">Reglas del ajedrez</button>
+    <button>Sobre esta web</button>
+</div>
+
+<div id="reglas" style="display: none;">
+    <h2>Reglas básicas del ajedrez</h2>
+
+    <p>El objetivo es dar jaque mate al rey del rival.</p>
+
+    <ul>
+        <li><strong>Peón:</strong> avanza hacia delante y captura 	en diagonal.</li>
+        <li><strong>Torre:</strong> se mueve en horizontal y 	vertical.</li>
+        <li><strong>Caballo:</strong> se mueve en forma de L.</li>
+        <li><strong>Alfil:</strong> se mueve en diagonal.</li>
+        <li><strong>Reina:</strong> se mueve en horizontal, 	vertical y diagonal.</li>
+        <li><strong>Rey:</strong> se mueve una casilla en 	cualquier dirección.</li>
+    </ul>
+</div>
+
+<script>
+    	function mostrarReglas() {
+        const reglas = document.getElementById("reglas");
+
+        if (reglas.style.display === "none") {
+            reglas.style.display = "block";
+        } else {
+            reglas.style.display = "none";
+        }
+    }
+</script>
+
+</html>
